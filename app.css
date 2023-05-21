@@ -1,0 +1,132 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Abel', sans-serif;
+    font-family: 'Sofia Sans Condensed', sans-serif;
+    background-image: url(images/pexels-monstera-7412072.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 100px;
+}
+
+header{
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    width: 100%;
+    background-color: rgba(231, 174, 121, 0.8) ;
+}
+
+header #inputs {
+    margin-left: 120px;
+}
+
+header ul {
+    list-style: none;
+}
+
+header li {
+    font-size: 1.5em;
+    text-align: center;
+    padding-right: 8px;
+    cursor: pointer;
+    transition: 700ms;
+    padding: 4px;
+}
+
+header li:hover {
+    background:  rgb(232, 165, 102);
+    color: rgb(74, 74, 77);
+}
+main{
+    margin-top: 60px;
+    min-height: 800px;
+}
+
+main .container .box{
+    cursor: pointer;
+    background-color: rgba(231, 174, 121, 0.5) ;
+    position: relative;
+    height: 460px;
+    transition: 700ms;
+}
+main .container .box:hover{
+    transform: scale(1.05);
+}
+main .badge{
+    position: absolute;
+    bottom: -10px; 
+    right: -2px;
+    transition:700ms;
+    background: white;
+    border-radius: 0px;
+    width: 101%;
+    font-size: large;
+}
+main .badge:hover{
+  background: rgb(62, 64, 66);
+}
+main .information{
+    font-size: x-large;
+}
+main #border p{
+    
+    max-width: 100%;
+    min-height: 80px;
+    margin: 0 auto;
+    display: inline-flex;
+    flex-wrap: wrap;
+}
+
+.loading p {
+    color: rgba(7, 7, 7, 0.6) ;
+
+ }
+footer {
+    position: fixed;
+    z-index: 3;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(231, 174, 121, 0.8) ;
+}
+
+@media screen and(max-width:992px) {
+    header .nav{
+        font-size: small;
+    }
+    main .box{
+        height: 200px;
+    }
+    header #inputs{
+        margin-left: 120px;
+    }
+    .pre-Footer .select{
+        margin: 0 auto;
+    }
+   
+}
+@media screen and (max-width:768px) {
+    main .box{
+        height: 480px;
+    }
+    header .nav{
+        font-size: x-small;
+    }
+    footer {
+        text-align: center;
+        min-height: 200px;
+       padding: 2px;
+    }
+
+}
+@media screen and (max-width:400px) {
+    header .row li{
+        padding: 5px;
+      }
+    }
+    footer select{
+        margin: 0 auto;
+    }

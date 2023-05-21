@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src='https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js'></script>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="app.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Abel&family=Sofia+Sans+Condensed:ital,wght@0,200;0,400;1,300&display=swap"
+        rel="stylesheet">
+        <script src="./js/app.js" defer type="module"></script>
+
+    <title>Document</title>
+
+</head>
+
+<body>
+    <header class="container-fluid ">
+        <div class="container">
+            <div class="row">
+                <div class="d-flex col-11 col-lg-6 justify-content-around text-white">
+                    <h3 class="logo p-0 display-5 ms-2 my-auto d-none d-md-block"> <a href="index.html"
+                            class="text-white"><i class="bi bi-globe"></i></a></h3>
+                    <ul class="nav my-auto">
+                        <li id="all">ALL</li>
+                        <li id="israel">Israel</li>
+                        <li id="usa">USA</li>
+                        <li id="thailand">Thailand</li>
+                        <li id="france">France</li>
+                    </ul>
+                </div>
+                <div class="d-flex col-6 mx-auto col-lg-4 d-lg-inline-block justify-content-around my-3" id="inputs">
+                    <div class="d-flex  col-6 col-lg-10 text-white mb-1">
+                        <input type="text" class="form-input  col-11 " placeholder="search by name.." id="id_search">
+                        <button class=" btn btn-light fa fa-search  my-auto me-2 display-5" aria-hidden="true"
+                            id="searchBtn"></button>
+                    </div>
+                </div>
+                <div class="d-flex col-6 mx-auto col-lg-2 d-lg-inline-block justify-content-around my-3" id="inputs">
+                    <select id="sort_id" class="form-select col-5 col-lg-10">
+                        <option value="" class="text-bg-secondary">Sort By..</option>
+                        <option value="name.common">name</option>
+                        <option value="population">population</option>
+                        <option value="subregion">region</option>
+                    </select>
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+    <main class="pb-5">
+        <div class="container">
+            <button class="btn-outline-light btn btn d-none my-3 px-2" id="return"
+                onclick=history.back()>return</button>
+            <div id="id_message" class=" bg-black mt-5 text-white m-auto p-3 text-center d-none"
+                style="border-radius: 16px;">
+                <h3>country cannot be found</h3>
+                <p class="mx-auto">please try again</p>
+                <button class="btn btn-white btn-outline-light text-white" id="closeBtn">close</button>
+            </div>
+            <div id="id_loading" class="loading text-center pt-5">
+                
+                <img src="images/loading-gif-png-5.gif" height="200px" alt="loading">
+                <!-- <p class="display-2 "><strong>Loading...</strong></p> -->
+            </div>
+            <div class="row justify-content-around" id="id_row">
+            </div>
+        </div>
+    </main>
+    <footer class="">
+      
+        <div class="Footer container mt-1   d-md-flex justify-content-between text-white">
+            <h6><i class="fa fa-copyright pt-2 " aria-hidden="true"></i>2023 Ayala Weingarten</h6>
+            <div>
+                <div class="links display-6 py-1 px-1 me-2">
+                    <a href="https://github.com/ayalaguttman"><i class="fa fa-github p-2 text-light" aria-hidden="true"></i></a>
+                    <a href="https://www.linkedin.com/in/ayala-weingarten-guttman-6770951b1/"><i
+                            class="fa fa-linkedin-square  p-2 text-light" aria-hidden="true"></i></a>
+                    <a href="https://api.whatsapp.com/send?phone=972533915870"><i class="fa fa-whatsapp  p-2 text-light"
+                            aria-hidden="true"></i></a>
+                </div>
+            </div>
+            <div class=" p-0 ">
+                <div class="pre-Footer container p-2  d-flex justify-content-end  d-none">
+                    <div class="select d-flex me-5">
+                        <select id="id_select" class="form-select col-10 col-md-5 col-lg-3">
+                            <option>Choose Country..</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
